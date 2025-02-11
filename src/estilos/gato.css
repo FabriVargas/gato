@@ -1,0 +1,32 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+#container .cell{
+    width: 90px;
+    height: 90px;
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid #c71313;
+    float: left;
+}
+
+
+#container{
+    width: 350px;
+    text-align: center;
+}
+
+#resultado{
+    position: relative;
+    top: 10px;
+    height: 1rem;
+}
