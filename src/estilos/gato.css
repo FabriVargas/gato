@@ -1,7 +1,7 @@
 body{
     width: 100vw;
     height: 100vh;
-    color: blue;
+    color: rgb(10, 199, 247);
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     display: grid;
