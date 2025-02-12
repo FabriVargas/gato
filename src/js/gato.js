@@ -5,19 +5,27 @@ const celdas = document.getElementsByClassName("cell")
 let jugador = true;
 
 for (let i = 0; i < celdas.length; i++) {
-    celdas[i].addEventListener("click", selector);
+    celdas[i].addEventListener("click", function () {
+        console.log(celdas[i]);
+        celdas[i].innerHTML = "X";
+        selector()
+    });
     
 }
 
-function selector(e) {
-    let cellvalor = e.target.innerHTML;
-    if (!cellvalor.length) {
+function selector() {
+   
+    
+    
+    let ia =  Math.floor((Math.random() * 9));
+    console.log(ia);
+    celdas[ia].innerHTML = "O"
 
-e.target.innerHTML = jugador? 'x' : 'o';
-        jugador =!jugador;
 
-    }
+    //realizar proceso de validación de casillas (validar que casillas estan ocupadas)
 
+        
+    
     checkline(0,1,2)
     checkline(3,4,5)
     checkline(6,7,8)
