@@ -2,10 +2,18 @@ const container = document.getElementById("container")
 const Reiniciar = document.getElementById("Reiniciar")
 const celdas = document.getElementsByClassName("cell")
 
+
 let jugador = true;
+        
+        
 
 for (let i = 0; i < celdas.length; i++) {
     celdas[i].addEventListener("click", function () {
+        if (celdas!=[]) {
+            console.log("ERROR");
+        }
+
+        else if (celdas==[])
         console.log(celdas[i]);
         celdas[i].innerHTML = "X";
         selector()
@@ -16,14 +24,18 @@ for (let i = 0; i < celdas.length; i++) {
 function selector() {
    
     
-    
-    let ia =  Math.floor((Math.random() * 9));
-    console.log(ia);
-    celdas[ia].innerHTML = "O"
+    let celdasVacias = [];
+    for (let index = 0; index < celdas.length; index++) {
+        if (celdas[index].textContent == "") {
+            celdasVacias.push(index);
+        }
+        
+    }
 
-
-    //realizar proceso de validación de casillas (validar que casillas estan ocupadas)
-
+    if (celdasVacias.length > 0) {
+    const celdaClq = celdasVacias[ Math.floor(Math.random() * celdasVacias.length)]; 
+    celdas[celdaClq].innerHTML = "O";
+}
         
     
     checkline(0,1,2)
@@ -51,13 +63,14 @@ function selector() {
 }
 
 function mostrarGanador(jugador) {
-    document.querySelector("#resultado").innerHTML = jugador + "ganaste gg";
+    document.querySelector("#resultado").innerHTML = jugador + " Ganó"
     
 }
 
 Reiniciar.addEventListener("click", function() {
     for(let index = 0; index < celdas.length; index++) {
     celdas[index].textContent = "";
+    document.querySelector("#resultado").innerHTML = "";
     console.log("Reiniciar");
     }
 })

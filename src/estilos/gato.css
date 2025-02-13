@@ -1,7 +1,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    color: rgb(10, 199, 247);
+    background-color: rgb(200, 200, 255);
+    color: rgb(10, 45, 247);
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     display: grid;
@@ -15,18 +16,27 @@ body{
     font-size: 3rem;
     display: grid;
     place-items: center;
-    border: 1px solid #c71313;
+    border: 2px solid #72aefc;
+    background-color: aliceblue;
     float: left;
+    margin: 1px;
+    
 }
 
 
 #container{
-    width: 350px;
+    width: 300px;
     text-align: center;
 }
 
 #resultado{
     position: relative;
-    top: 10px;
+    margin-top: -10%;
     height: 1rem;
+}
+
+#Reiniciar{
+    width: 180px;
+    height: 80px;
+    margin-top: -20%
 }
