@@ -38,5 +38,9 @@ body{
 #Reiniciar{
     width: 180px;
     height: 80px;
-    margin-top: -20%
+    margin-top: -10%
+}
+
+#Modos{
+    display: flex;
 }

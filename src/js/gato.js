@@ -1,26 +1,44 @@
 const container = document.getElementById("container")
 const Reiniciar = document.getElementById("Reiniciar")
 const celdas = document.getElementsByClassName("cell")
-
+const JvsJ = document.getElementById("JvsJ")
+const Multijugador = document.getElementById("Multijugador")
+const ModoSeleccionado = document.getElementById("ModoSeleccionado")
 
 let jugador = true;
+let pierde = false;
+let ModoJuego= "";
+
+JvsJ.addEventListener("click", function () {
+    ModoJuego = "JvsJ"
+    ModoSeleccionado.textContent = "Modo 1vs1";
+    selector();
+    
+})
+
+Multijugador.addEventListener("click", function () {
+    ModoJuego = "Multijugador"
+    ModoSeleccionado.textContent = "Modo Multijugador";
+    selector();
+});
         
         
 
 for (let i = 0; i < celdas.length; i++) {
     celdas[i].addEventListener("click", function () {
-        if (celdas!=[]) {
-            console.log("ERROR");
+        if (celdas[i].textContent != "") {
+            return;
         }
 
         else if (celdas==[])
         console.log(celdas[i]);
         celdas[i].innerHTML = "X";
-        selector()
+        selector();
     });
     
 }
 
+pierde =
 function selector() {
    
     
