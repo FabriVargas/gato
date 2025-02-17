@@ -9,20 +9,6 @@ let jugador = true;
 let pierde = false;
 let ModoJuego= "";
 
-JvsJ.addEventListener("click", function () {
-    ModoJuego = "JvsJ"
-    ModoSeleccionado.textContent = "Modo 1vs1";
-    selector();
-    
-})
-
-Multijugador.addEventListener("click", function () {
-    ModoJuego = "Multijugador"
-    ModoSeleccionado.textContent = "Modo Multijugador";
-    selector();
-});
-        
-        
 
 for (let i = 0; i < celdas.length; i++) {
     celdas[i].addEventListener("click", function () {
@@ -38,7 +24,7 @@ for (let i = 0; i < celdas.length; i++) {
     
 }
 
-pierde =
+
 function selector() {
    
     

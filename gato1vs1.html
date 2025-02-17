@@ -1,16 +1,15 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic tac toe</title>
-    <link rel="stylesheet" href="src/estilos/gato.css">
+    <link rel="stylesheet" href="src/estilos/gato1vs1.css">
 </head>
 <body>
-
-    <h3>JUGADOR VS RANDOM</h3>
+<h3 id="titulo">JUGADOR VS JUGADOR</h3>
 <div id="Modos">
-    <button id="JvsJ"  onclick="location.href= 'gato1vs1.html'">1vs1</button>
+    <button id="Multijugador" onclick="location.href='gato.html'">Multijugador</button>
 </div>
 <h3 id="ModoSeleccionado"></h3>
 
@@ -29,6 +28,6 @@
 
     <div id="resultado"></div>
     <button id="Reiniciar">Jugar otra vez</button>
-    <script src="src/js/gato.js"></script>
+    <script src="src/js/gato1vs1.js"></script>
 </body>
 </html>

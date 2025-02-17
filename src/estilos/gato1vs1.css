@@ -20,6 +20,7 @@ body{
     background-color: aliceblue;
     float: left;
     margin: 1px;
+
     
 }
 
@@ -42,9 +43,7 @@ body{
     margin-top: -10%
 }
 
-#Modos{
-    display: flex;
-}
+
 #titulo{
     text-align: center;
 }
